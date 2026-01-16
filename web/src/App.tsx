@@ -1,11 +1,9 @@
 function App() {
   return (
-    <main className="h-screen flex items-center justify-center">
-      <h1 className="text-xl font-semibold text-green-500">
-        EDUCASE ASSIGNMENT
-      </h1>
+    <main className='flex h-screen items-center justify-center'>
+      <h1 className='text-xl font-semibold text-green-500'>EDUCASE ASSIGNMENT</h1>
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
