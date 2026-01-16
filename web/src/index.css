@@ -1,1 +1,16 @@
 @import 'tailwindcss';
+
+:root {
+  --primary: #6C25FF;
+  --background: #F7F8F9;
+  --foreground: #1D2226;
+  --border: #919191;
+  --error: #DD4A3D;
+}
+
+@layer base {
+  body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #f4f6f8;
+  }
+}

@@ -1,8 +1,10 @@
+import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import express, { Request, Response } from 'express'
 import morgan from 'morgan'
 import path from 'path'
 
+import errorHandler from './middlewares/error-handler'
 import unknownEndpoint from './middlewares/unknown-endpoint'
 import router from './routes'
 
@@ -12,6 +14,7 @@ app.use(express.static('dist'))
 app.use(express.json())
 app.use(cors())
 app.use(morgan('tiny'))
+app.use(cookieParser())
 
 app.use('/api', router)
 
@@ -46,5 +49,6 @@ app.use((req: Request, res: Response, next) => {
 })
 
 app.use(unknownEndpoint)
+app.use(errorHandler)
 
 export default app
