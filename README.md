@@ -65,19 +65,6 @@ The application centers a mobile app interface on the web, closely following the
 - **ORM**: Prisma
 - **Database**: PostgreSQL
 
-## 📁 Project Structure
-
-The project follows a **clean and scalable structure**, keeping frontend and backend concerns well separated and easy to maintain.
-
-```
-educase-assignment/
-├── server/            # Backend (Node.js + Express + Prisma)
-├── web/               # Frontend (React + TypeScript)
-├── prisma/            # Prisma schema & migrations
-├── README.md
-└── package.json
-```
-
 ## 🚦 Getting Started
 
 ### Prerequisites
@@ -113,7 +100,7 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
-PORT=3000
+PORT=3001
 DATABASE_URL="postgresql://username:password@localhost:5432/yourdb"
 JWT_SECRET="YOUR_SECRET_KEY"
 ```
