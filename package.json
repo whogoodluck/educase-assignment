@@ -12,6 +12,7 @@
     "build:all": "npm run build:frontend && npm run build:backend",
     "lint": "eslint .",
     "format": "prettier --write .",
+    "prisma:generate": "npx prisma generate",
     "studio": "npx prisma studio"
   },
   "repository": {

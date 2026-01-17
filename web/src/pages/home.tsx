@@ -14,8 +14,8 @@ export default function Home() {
   }, [user, navigate])
 
   return (
-    <div className="h-screen flex p-4">
-      <div className="mx-auto h-full w-full flex flex-col justify-end max-w-93.75 border border-gray-200 bg-[#F7F8F9] px-5 py-8">
+    <div className="h-screen flex md:p-4">
+      <div className="mx-auto h-full w-full flex flex-col justify-end max-w-93.75 md:border border-gray-200 bg-[#F7F8F9] px-5 py-8">
         <div className="text-start mb-7">
           <h1 className="mb-2.5 text-[28px] font-semibold text-[#1D2226]">
             Welcome to PopX
