@@ -1,3 +1,4 @@
+import { Loader2 } from 'lucide-react'
 import React from 'react'
 
 type ButtonProps = {
@@ -26,7 +27,9 @@ const Button = ({
       onClick={onClick}
       className={`w-full rounded-md bg-[#642AF5] hover:bg-[#642AF5]/90 cursor-pointer px-4 py-3 font-medium text-white transition-colors disabled:cursor-not-allowed disabled:bg-[#CBCBCB] disabled:opacity-50 ${className} `}
     >
-      {isLoading ? 'Signing in...' : children}
+      {isLoading ?
+        <Loader2 className='animate-spin mx-auto' />
+ : children}
     </button>
   )
 }

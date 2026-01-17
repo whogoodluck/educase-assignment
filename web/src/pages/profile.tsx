@@ -18,7 +18,7 @@ export default function Profile() {
 
   return (
     <div className="h-screen flex md:p-4">
-      <div className="mx-auto h-full w-full max-w-93.75 md:border border-gray-200 bg-[#F7F8F9]">
+      <div className="mx-auto h-full w-full md:max-w-93.75 md:border border-gray-200 bg-[#F7F8F9]">
         <div className="px-4 py-5 bg-white shadow-xs">
           <h1 className="text-lg text-[#1D2226]">
             Account Settings
