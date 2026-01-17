@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production tsx dist/index.js",
+    "start": "NODE_ENV=production node dist/index.js",
     "dev": "NODE_ENV=development tsx --watch src/index.ts",
     "build": "tsc",
     "build:frontend": "cd ./web && npm install && npm run build",
