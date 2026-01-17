@@ -2,14 +2,23 @@ import { useAuth } from '../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import Button from '../components/button'
 import { Camera } from 'lucide-react'
+import { useState } from 'react'
 
 export default function Profile() {
   const { user, logout } = useAuth()
   const navigate = useNavigate()
+  const [loading, setLoading] = useState(false)
 
   const handleLogout = async () => {
-    await logout()
+    try {
+      setLoading(true)
+      await logout()
     navigate('/signin')
+    } catch (error) {
+      console.error('Logout failed:', error)
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (!user) {
@@ -58,7 +67,7 @@ export default function Profile() {
         </div>
 
         <div className="px-5 py-6 border-t border-dashed border-gray-300">
-          <Button onClick={handleLogout}>
+          <Button isLoading={loading} onClick={handleLogout}>
             Logout
           </Button>
         </div>
