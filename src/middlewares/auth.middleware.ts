@@ -15,16 +15,12 @@ export async function authenticate(req: AuthRequest, _res: Response, next: NextF
   try {
     const token = req.cookies.token
 
-    console.log('token', token)
-
     if (!token) {
       throw new HttpError(401, 'Authentication required')
     }
 
     const decoded = userService.verifyToken(token)
     req.user = decoded
-
-    console.log('decoded', decoded)
 
     next()
   } catch (err) {
