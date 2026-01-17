@@ -41,7 +41,7 @@ export default function Signup() {
   }
 
   return (
-    <div className=' flex md:p-4'>
+    <div className='h-screen flex md:p-4'>
       <div className='mx-auto h-full flex flex-col w-full md:max-w-93.75 md:border border-gray-200 bg-[#F7F8F9] px-5 py-8'>
         <div className='mb-5.5'>
           <h1 className='text-[28px] font-semibold text-[#1D2226]'>
